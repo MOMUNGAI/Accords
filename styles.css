@@ -1,0 +1,51 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400;500;700&display=swap');
+
+
+.accordionholder{
+    max-width: 480px;
+    margin: 30px auto;
+}
+
+.accordionholder input{
+    display: none;
+}
+
+.accordionholder label{
+    display: block;
+    position: relative;
+    padding: 10px;
+    cursor: pointer;
+    background: #cccccc;
+    font-family: 'ubuntu' sans-serif;
+    font-size: 16px;
+    transition: all 0.3s ease;
+}
+
+.accordionholder label:hover{
+    background: blue;
+}
+
+.insidecontainer{
+    display: block;
+    height: 0px;
+    padding: 0px 15px;
+    background: #F266AB;
+    font-family: 'Ubuntu' sans-serif;
+    font-size: 16px;
+    overflow: hidden;
+    transition: all 0.3s ease;
+}
+
+.accordionholder input:checked ~ .insidecontainer{
+    height: 250px;
+    overflow: scroll;
+}
+  
+input[type=checkbox] + label::before{
+    content: '+';
+}
+
+input[type=checkbox]:checked + label::before{
+    content: '-';
+}
